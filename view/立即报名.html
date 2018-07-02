@@ -12,7 +12,7 @@
     <meta name="keywords" content="关键词，关键词">
     <meta name="description" content="描述。。。。">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="../public/css/sm.min.css">
     <link rel="stylesheet" href="../public/css/weixin.css">
 </head>
 <body>
@@ -61,13 +61,60 @@
                     </li>
                 </ul>
             </div>
-            <div class="content-block"> <a href="#" class="button button-big button-round">新增报名人员</a></div>
+            <div class="content-block"> <a href="#" class="button button-big button-round open-popup" data-popup=".popup-add">新增报名人员</a></div>
         </article>
         <!-- 页面内容区结束 -->
     </section>
+    <!-- popup 开始-->
+    <div class="popup popup-add">
+        <div class="add-form-wrap">
+            <div class="add-form">
+                <div class="list-block">
+                    <ul>
+                        <!-- Text inputs -->
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">姓名：</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入姓名">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">电话：</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入电话">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">职位：</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入职位">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="content-padded">
+                        <a href="#" class="button button-fill">确定提交</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup 结束-->
 </div>
-<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script src="../public/js/zepto.min.js"></script>
+<script src="../public/js/sm.min.js"></script>
 <script src="../public/js/weixin.js"></script>
 </body>
 </html>

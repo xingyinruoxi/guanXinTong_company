@@ -35,6 +35,27 @@ $(function () {
     $(document).on("pageInit", "#page-enroll", function (e, id, page) {
         $('.list-entry-info').on('click','.link-close',function () {
             $(this).closest('li').hide();
+        });
+        var $btnClose=$('<i class="ico ico-close"></i>');
+        var $val='';
+        var $form=$('.add-form');
+        $form.find('input').on('input',function () {
+            $val=$(this).val();
+           if($val){
+               $(this).closest('.item-inner').append($btnClose);
+           }else{
+               $(this).closest('.item-inner').find('.ico').remove();
+           }
+        }).on('focus',function () {
+            if($(this).val()){
+                $(this).closest('.item-inner').append($btnClose);
+            }
+            $(this).closest('li').siblings().find('.ico-close').remove()
+        });
+
+        $form.on('click','.ico-close',function () {
+            $(this).closest('.item-inner').find('input').val('');
+            $(this).remove();
         })
     });
     // 报名成功

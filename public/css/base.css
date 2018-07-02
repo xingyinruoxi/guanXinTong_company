@@ -108,7 +108,11 @@ p {
 .media-list .item-inner:after {
     height: 0
 }
-
+input::-webkit-input-placeholder{
+    color: #8E8E93;
+    font-size: .75rem;}
+.searchbar .search-input input::-webkit-input-placeholder{
+    font-size: 12px;}
 .media-list .item-content:after {
     content: '';
     position: absolute;
