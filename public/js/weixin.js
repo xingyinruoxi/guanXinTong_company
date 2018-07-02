@@ -11,49 +11,49 @@ $(function () {
 
         swiperInit(0);
         var onOff = true;
-        var $searchbar=$('.searchbar');
-        var $content=$('.content');
+        var $searchbar = $('.searchbar');
+        var $content = $('.content');
         $('.tab-link').on('click', function () {
             var $index = $(this).index();
             if ($index === 2) {
-                if(onOff){
+                if (onOff) {
                     setTimeout(function () {
                         swiperInit($index);
                     });
                     onOff = false;
                 }
                 $searchbar.hide();
-                $content.css('top','4.4rem');
-            }else{
+                $content.css('top', '4.4rem');
+            } else {
                 $searchbar.show();
-                $content.css('top','6.6rem');
+                $content.css('top', '6.6rem');
             }
 
         })
     });
 
     $(document).on("pageInit", "#page-enroll", function (e, id, page) {
-        $('.list-entry-info').on('click','.link-close',function () {
+        $('.list-entry-info').on('click', '.link-close', function () {
             $(this).closest('li').hide();
         });
-        var $btnClose=$('<i class="ico ico-close"></i>');
-        var $val='';
-        var $form=$('.add-form');
-        $form.find('input').on('input',function () {
-            $val=$(this).val();
-           if($val){
-               $(this).closest('.item-inner').append($btnClose);
-           }else{
-               $(this).closest('.item-inner').find('.ico').remove();
-           }
-        }).on('focus',function () {
-            if($(this).val()){
+        var $btnClose = $('<i class="ico ico-close"></i>');
+        var $val = '';
+        var $form = $('.add-form');
+        $form.find('input').on('input', function () {
+            $val = $(this).val();
+            if ($val) {
+                $(this).closest('.item-inner').append($btnClose);
+            } else {
+                $(this).closest('.item-inner').find('.ico').remove();
+            }
+        }).on('focus', function () {
+            if ($(this).val()) {
                 $(this).closest('.item-inner').append($btnClose);
             }
             $(this).closest('li').siblings().find('.ico-close').remove()
         });
 
-        $form.on('click','.ico-close',function () {
+        $form.on('click', '.ico-close', function () {
             $(this).closest('.item-inner').find('input').val('');
             $(this).remove();
         })
@@ -62,13 +62,13 @@ $(function () {
     $(document).on("pageInit", "#page-enroll-success", function (e, id, page) {
         /*=== Popup ===*/
         var myPhotoBrowserPopup = $.photoBrowser({
-            photos : [
+            photos: [
                 '//img.alicdn.com/tps/i3/TB1kt4wHVXXXXb_XVXX0HY8HXXX-1024-1024.jpeg',
             ],
             theme: 'dark',
             type: 'popup'
         });
-        $(page).on('click','.pb-popup',function () {
+        $(page).on('click', '.pb-popup', function () {
             myPhotoBrowserPopup.open();
         });
     });
