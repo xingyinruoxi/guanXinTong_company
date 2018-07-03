@@ -450,3 +450,157 @@
 .add-form .list-block .item-title.label{width: auto}
 /*个人信息*/
 #page-userInfo{ font-size: .75rem;}
+/*测试详情*/
+#page-list-questions h1{
+    font-size: .95rem;}
+#page-list-questions .time_source{ text-align: center;
+    color: #999;
+    font-size: .7rem;
+    padding-bottom: .5rem;
+}
+.list-questions{
+    margin-bottom: 3rem;
+}
+.list-questions li{background: #F8F8F8;
+    margin-bottom: .75rem;
+    padding: .75rem;}
+.list-questions header{
+    font-size: .75rem;
+    line-height: 1.2rem;
+    padding-bottom: .3rem;
+}
+.list-questions label{display: block;
+    font-size: .7rem;color: #666666;}
+#page-list-questions .bar-tab,#page-view-questions .bar-tab{ background:#fff;
+    padding: 0 .75rem;
+    }
+#page-list-questions .bar-tab:before,#page-view-questions .bar-tab:before{
+    height: 0;
+}
+#page-list-questions .bar-tab .tab-item,#page-view-questions .bar-tab .tab-item{color: #ffffff;background:#1870EE;
+    position: relative;
+    height: 2rem;
+    font-weight: normal;
+    top: -1.3rem;}
+.list-questions input{
+    display: none;
+}
+.list-questions span{
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: .5rem;
+}
+.list-questions input[type='radio'] ~span{
+    background-image: url("../img/user/ico-radio.png");
+}
+.list-questions input[type='radio']:checked ~span{
+    background-image: url("../img/user/ico-radio-active.png");
+}
+.list-questions input[type='checkbox'] ~span{
+    background-image: url("../img/user/ico-checked.png");
+}
+.list-questions input[type='checkbox']:checked ~span{
+    background-image: url("../img/user/ico-checked-active.png");
+}
+/* 用户管理 */
+#page-user-manger .color-warning{
+    border:1px solid #f60;
+    height: 24px;
+    padding: 0 5px;
+    line-height: 24px;
+    float: right;}
+/**/
+#page-submit-question .content{
+    display: flex; flex-direction: column
+}
+#page-submit-question .submit-btns{
+    height: 2.6rem;
+    justify-content: space-between;
+    align-items:center;
+    background: #fff;
+    margin-bottom: .5rem;
+    display: flex;
+    padding: 0 .75rem;
+    font-size: .75rem;
+}
+#page-submit-question  .btn-cancel{color:#C9C9C9 }
+#page-submit-question  .btn-submit{color:#007AFF }
+#page-submit-question textarea{
+    flex: 1;
+    font-size: .7rem;
+    padding:.5rem .75rem;}
+textarea::-webkit-input-placeholder{
+    color:#D8D6D6;
+    font-size: .75rem;
+}
+/* 提交测试 */
+#page-test-result{text-align:center}
+#page-test-result .cur-source{
+    width: 10.5rem;
+    height: 10.5rem;
+    background: url("../img/user/bg-circle-big.png") no-repeat center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.75rem auto;
+    color: #ffffff;
+
+}
+#page-test-result .cur-source .num{
+    font-size: 1.2rem;}
+#page-test-result .cur-source .num strong{
+    font-size: 2.35rem;
+    font-weight: normal;}
+#page-test-result .cur-source .text{
+    font-size: .7rem;}
+#page-test-result .result{
+    font-size: .75rem;
+color: #333;}
+#page-test-result .content-article h1{
+    font-size: .95rem;}
+#page-test-result .button-fill{
+    background: #1870EE;
+    height: 2.2rem;
+    line-height: 2.2rem;
+border-radius: 4px;
+    font-size: .8rem;
+    margin-top: 2rem;
+}
+/*查看问卷*/
+#page-view-questions .content-article h1{
+    margin: 0;
+    padding: 0;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    font-size: .8rem;}
+#page-view-questions li{ background: none;
+    padding-top: 0;
+    padding-bottom: 0;}
+#page-view-questions textarea{background:#F8F8F8; width: 100%;border-radius:2px;
+    height: 4.5rem; border:none;
+    padding: 10px 15px;
+    margin-top: 8px; }
+/*问卷提交*/
+#page-question-success h5{
+    font-size: .85rem;
+    margin-bottom: 0;
+    color: #333;}
+#page-question-success p{
+    color: #999999;
+    font-size: .75rem;
+    line-height: 21px;
+}
+#page-question-success .button-fill{
+    height: 2.2rem;
+    line-height: 2.2rem;
+    background:#1870EE ;
+    font-size: .8rem;
+    color: #ffffff;
+    border-radius:4px;
+    margin-top: 4rem;
+}

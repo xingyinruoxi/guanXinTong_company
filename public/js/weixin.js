@@ -1,5 +1,6 @@
 $(function () {
     'use strict';
+    /*======= 首页 =======*/
     $(document).on("pageInit", "#page-index", function (e, id, page) {
         function swiperInit(num) {
             new Swiper('.swiper-container' + num, {
@@ -32,6 +33,7 @@ $(function () {
         })
     });
 
+    /*======= 立即报名  =======*/
     $(document).on("pageInit", "#page-enroll", function (e, id, page) {
         $('.list-entry-info').on('click', '.link-close', function () {
             $(this).closest('li').hide();
@@ -58,7 +60,8 @@ $(function () {
             $(this).remove();
         })
     });
-    // 报名成功
+
+    /*======= 报名成功 =======*/
     $(document).on("pageInit", "#page-enroll-success", function (e, id, page) {
         /*=== Popup ===*/
         var myPhotoBrowserPopup = $.photoBrowser({
@@ -70,6 +73,20 @@ $(function () {
         });
         $(page).on('click', '.pb-popup', function () {
             myPhotoBrowserPopup.open();
+        });
+    });
+
+    /*======= 用户管理页面 =======*/
+    $(document).on("pageInit", "#page-user-manger", function (e, id, page) {
+        var $content = $(page).find('.content');
+        $('.list-entry-info').on('click', '.link-close', function () {
+            $(this).closest('li').hide();
+        });
+        $content.on('click','.confirm-ok', function () {
+            var $this=$(this);
+            $.confirm('是否确认申请删除？', function () {
+                $this.closest('div').remove();
+            });
         });
     });
     $.init();
