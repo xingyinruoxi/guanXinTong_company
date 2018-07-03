@@ -448,3 +448,5 @@
     font-size: .75rem;
 }
 .add-form .list-block .item-title.label{width: auto}
+/*个人信息*/
+#page-userInfo{ font-size: .75rem;}
