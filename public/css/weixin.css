@@ -586,7 +586,11 @@ textarea::-webkit-input-placeholder {
     color: #D8D6D6;
     font-size: .75rem;
 }
-
+.search-input .icon{left: 50%;
+    margin-left: -74px;}
+.search-input input::-webkit-input-placeholder {
+   text-align: center;
+}
 /* 提交测试 */
 #page-test-result {
     text-align: center
