@@ -880,3 +880,9 @@ textarea::-webkit-input-placeholder {
 .userinfo  .avotar .edit{position: absolute;    bottom: 5px;
     right: -4px;
     }
+.nodata{
+    margin-top: 140px;}
+.nodata p{
+    font-size: .7rem;
+}
+.color-primary{color:#0EA3FF; }
