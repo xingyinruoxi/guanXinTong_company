@@ -147,7 +147,7 @@
 
 /* 固定底部提问按钮*/
 .fixed-bottom-circle {
-    position: fixed;
+    position: absolute;
     right: 15px;
     bottom: 70px;
     /*display: inline-block;*/
@@ -157,7 +157,7 @@
     height: 2.2rem;
     border-radius: 50%;
     overflow: hidden;
-    display: flex;
+    display: none;
     color: #ffffff;
     justify-content: center;
     line-height: 2.2rem;
@@ -186,13 +186,13 @@
 .media-list-policy .item-title {
     white-space: normal;
     color: #333;
-    font-size: .8rem;
+    font-size: .75rem;
     line-height: 1.2rem;
     padding-top: .7rem;
 }
 
 .media-list-policy .item-text {
-    top: .8rem;
+    top: .6rem;
     font-size: .7rem;
     color: #999999;
 }
@@ -580,6 +580,7 @@
     flex: 1;
     font-size: .7rem;
     padding: .5rem .75rem;
+    border: none;
 }
 
 textarea::-webkit-input-placeholder {
@@ -785,14 +786,16 @@ textarea::-webkit-input-placeholder {
 .list-tif li {
     background: #F8F8F8;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 14px;
     padding: .2rem .5rem;
     line-height: 1.1rem;
     margin-bottom: .75rem;
+
 }
 
 .list-tif a {
     color: #1870EE;
+    display: flex;
 }
 
 .list-tif .ico-tip2 {

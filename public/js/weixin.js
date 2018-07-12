@@ -6,31 +6,62 @@ $(function () {
             new Swiper('.swiper-container' + num, {
                 pagination: {
                     el: '.swiper-pagination' + num,
-                },
+                }
             });
         }
 
-        swiperInit(0);
-        var onOff = true;
-        var $searchbar = $('.searchbar');
-        var $content = $('.content');
-        $('.tab-link').on('click', function () {
-            var $index = $(this).index();
-            if ($index === 2) {
-                if (onOff) {
-                    setTimeout(function () {
-                        swiperInit($index);
-                    });
-                    onOff = false;
-                }
-                $searchbar.hide();
-                $content.css('top', '4.4rem');
-            } else {
-                $searchbar.show();
-                $content.css('top', '6.6rem');
-            }
+        var $btQuestion = $('#btn-question');
 
-        })
+        function contentTop() {
+            var onOff = true;
+            var $searchbar = $('.searchbar');
+            var $content = $('.content');
+            $('.tab-link').on('click', function () {
+                var $index = $(this).index();
+                if ($index === 2) {
+                    if (onOff) {
+                        setTimeout(function () {
+                            swiperInit($index);
+                        });
+                        onOff = false;
+                    }
+                    $searchbar.hide();
+                    $content.css('top', '4.4rem');
+                } else {
+                    $searchbar.show();
+                    $content.css('top', '6.6rem');
+                }
+
+            })
+        }
+
+        function initHeight() {
+            var $tabsAnimatedWrap = $('.tabs-animated-wrap');
+            var scrollHeight = $('.tab').eq(0).get(0).scrollHeight;
+            $tabsAnimatedWrap.height(scrollHeight);
+        }
+
+        function tabsHeight() {
+            var $tabsAnimatedWrap = $('.tabs-animated-wrap');
+            $(page).on('click', '.tab-link', function () {
+                $tabsAnimatedWrap.height('100%');
+                var $index = $(this).index();
+                var scrollHeight = $('.tab').eq($index).get(0).scrollHeight;
+                $tabsAnimatedWrap.height(scrollHeight);
+                if ($index === 1) {
+                    $btQuestion.css('display', 'flex');
+                } else {
+                    $btQuestion.css('display', 'none');
+                }
+            });
+        }
+
+        initHeight();
+        tabsHeight();
+        swiperInit(0);
+        contentTop();
+
+
     });
 
     /*======= 立即报名  =======*/
@@ -76,14 +107,37 @@ $(function () {
         });
     });
 
+    //page-my-questio
+    /*======= 我的咨询 =======*/
+    $(document).on("pageInit", "#page-my-question", function (e, id, page) {
+        function initHeight() {
+            var $tabsAnimatedWrap = $('.tabs-animated-wrap');
+            var scrollHeight = $('.tab').eq(0).get(0).scrollHeight+45;
+            $tabsAnimatedWrap.height(scrollHeight);
+        }
+
+        function tabsHeight() {
+            var $tabsAnimatedWrap = $('.tabs-animated-wrap');
+            $(page).on('click', '.tab-link', function () {
+                $tabsAnimatedWrap.height('100%');
+                var $index = $(this).index();
+                var scrollHeight = $('.tab').eq($index).get(0).scrollHeight+45;
+                console.log($index,scrollHeight);
+                $tabsAnimatedWrap.height(scrollHeight);
+            });
+        }
+
+        initHeight();
+        tabsHeight();
+    });
     /*======= 用户管理页面 =======*/
     $(document).on("pageInit", "#page-user-manger", function (e, id, page) {
         var $content = $(page).find('.content');
         $('.list-entry-info').on('click', '.link-close', function () {
             $(this).closest('li').hide();
         });
-        $content.on('click','.confirm-ok', function () {
-            var $this=$(this);
+        $content.on('click', '.confirm-ok', function () {
+            var $this = $(this);
             $.confirm('是否确认申请删除？', function () {
                 $this.closest('div').remove();
             });

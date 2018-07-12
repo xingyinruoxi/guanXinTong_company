@@ -89,13 +89,17 @@ p {
 .card-header {
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
+    font-weight: bold;
 }
 .card-content-inner{
     padding: 0 .75rem;}
 .card .color-gray{font-size: .7rem;}
+.title{
+    font-size: .9rem;
+    font-weight: bold;}
 .list-block {
     margin: 0;
-    box-shadow:1px 0px 0px rgba(0,0,0,0.25);
+    /*box-shadow:1px 0px 0px rgba(0,0,0,0.25);*/
     font-size: .75rem;
 }
 
